@@ -40,22 +40,19 @@ const dataA = [
 
 function ResumeSec() {
   return (
-    <main className="w-[80%] left-[20%] relative">
+    <main
+      className="lg:w-[80%] lg:left-[20%] relative"
+      id="resume"
+    >
       <div className="container p-8">
         <div className="p-6 bg-emerald-50">
           <h2 className="text-3xl font-semibold">
             <span className="text-accent">Re</span>sume
           </h2>
           <div className="border-2 w-14 mt-4 border-sky-400" />
-          <p className="text-gray-500 text-xl mt-6">
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
-          </p>
-          <div className="flex p-4 gap-6">
+          <div className="flex flex-col lg:flex-row gap-6 p-4">
             <div>
-              <h2 className="text-4xl font-bold">
+              <h2 className="text-2xl lg:text-4xl font-bold">
                 Edu<span className="text-accent">cation</span>
               </h2>
               <div className="border-1 rounded-full w-6 h-6 bg-indigo-300" />
@@ -71,7 +68,7 @@ function ResumeSec() {
               ))}
             </div>
             <div>
-              <h2 className="text-4xl font-bold">
+              <h2 className="text-2xl lg:text-4xl font-bold">
                 Per<span className="text-accent">sonal</span> Projects
               </h2>
               <div className="border-1 rounded-full w-6 h-6 bg-indigo-300" />

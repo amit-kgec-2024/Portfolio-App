@@ -2,9 +2,14 @@ import React from "react";
 
 function ProjectCard({ title, links, useTech }) {
   return (
-    <div className="container items-center shadow-lg shadow-slate-700 mb-10 flex flex-col bg-slate-200 border-4 border-gray-400  rounded-md">
-      <h1 className="text-4xl font-bold mt-10">{title}</h1>
-      <p className="text-2xl p-8 text-gray-500 mt-10">{useTech}</p>
+    <div
+      className="container bg-fixed items-center shadow-lg shadow-slate-700 my-10 flex flex-col  rounded-md"
+      style={{ backgroundImage: `url(${"7615017.svg"})` }}
+    >
+      <h1 className="text-4xl font-bold mt-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-700">
+        {title}
+      </h1>
+      <p className="text-sx md:text-2xl p-8 text-gray-500 mt-10">{useTech}</p>
       <a
         target="_blank"
         href={links}

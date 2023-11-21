@@ -5,7 +5,10 @@ import ProjectCard from './ProjectCard';
 
 function ProjectSec() {
   return (
-    <main className="w-[80%] left-[20%] p-6 content-center text-center relative ">
+    <main
+      className="lg:w-[80%] lg:ml-[20%] p-8 bg-fixed content-center text-center relative "
+      style={{ backgroundImage: `url(${"7413540.svg"})` }}
+    >
       <div>
         {data.map((el) => (
           <ProjectCard
@@ -23,12 +26,6 @@ function ProjectSec() {
 export default ProjectSec
 
 const data = [
-  {
-    title: "My Portfolio",
-    useTech:
-      "I have done this work all by myself and in it all my details and my project work have been uploaded. About Section and Go to Contact Section and Feedback Me.",
-    links: "https://amit-mandal-kgce.github.io/my-portfolio/",
-  },
   {
     title: "IndMart",
     useTech:

@@ -6,42 +6,22 @@ import { NavLink } from "react-router-dom";
 
 export default function NavSection() {
   return (
-    <div className="container mt-8 flex">
-      <ul className="text-3xl text-white">
-        <NavLink
-          to="/"
-          className="flex gap-6 pt-6"
-        >
+    <div className="grid mx-20 my-10">
+      <ul className="text-2xl">
+        <NavLink to="/" className="grid grid-cols-2 py-2">
           <AiOutlineHome /> Home
         </NavLink>
 
-        <NavLink
-          to="/about"
-          className="flex gap-6 pt-6"
-        >
+        <NavLink to="/about" className="grid grid-cols-2 py-2">
           <AiOutlineUser /> About
         </NavLink>
 
-        <NavLink
-          to="/resume"
-          className="flex gap-6 pt-6"
-        >
+        <NavLink to="/resume" className="grid grid-cols-2 py-2">
           <HiDocument />
           Resume
         </NavLink>
 
-        <NavLink
-          to="/projects"
-          className="flex gap-6 pt-6"
-        >
-          <BiBookContent />
-          My Projects
-        </NavLink>
-
-        <NavLink
-          to="/contact"
-          className="flex gap-6 pt-6"
-        >
+        <NavLink to="/contact" className="grid grid-cols-2 py-2">
           <AiOutlineMail />
           Contact
         </NavLink>

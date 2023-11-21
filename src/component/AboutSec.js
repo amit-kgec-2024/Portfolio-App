@@ -5,7 +5,10 @@ import AboutProfSkill from "./AboutProfSkill";
 
 function AboutSec() {
   return (
-    <main className="w-[80%] left-[20%] relative">
+    <main
+      className="w-full lg:w-[80%] lg:ml-[20%] relative"
+      id="about"
+    >
       <div className="container p-8">
         <AboutCart />
         <AboutSkils />

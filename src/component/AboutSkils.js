@@ -8,11 +8,11 @@ function AboutSkils() {
         Ski<span className="text-accent">ll</span>s
       </h2>
       <div className="border-2 w-14 mt-4 border-sky-400" />
-      <p className="text-gray-500 text-xl mt-6">
-        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-        aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-        quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-        sit in iste officiis commodi quidem hic quas.
+      <p className="text-gray-500 text-md lg:text-2xl mt-6">
+        Programming language JavaScript (ES6+). Web Development: Node.js,
+        React.js, Next.js Repository MongoDB. Other technologies Other
+        technologies/tools in which you are proficient. Soft communication,
+        teamwork, problem solving etc.
       </p>
       <SkillsCart />
     </div>
