@@ -5,8 +5,8 @@ import { BiSolidCalendar } from "react-icons/bi";
 function ResumePerProj({time, title, details}) {
   return (
     <div className="">
-      <div className="border-l-8 border-indigo-300 p-2 mx-2 md:text-2xl  text-gray-500">
-        <div className="border-2 md:w-[550px] lg:w-[600px] border-gray-300 p-3 rounded-lg">
+      <div className="border-l-8 border-indigo-300 p-2 mx-2 md:text-base  text-gray-500">
+        <div className="border-2 w-[100%] border-gray-300 p-3 rounded-lg">
           <ul className="flex text-xl md:text-3xl gap-4">
             <BiSolidCalendar />
             <p>{time}</p>

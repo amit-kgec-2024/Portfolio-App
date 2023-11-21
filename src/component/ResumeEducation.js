@@ -4,8 +4,8 @@ import { BiSolidCalendar } from "react-icons/bi";
 const ResumeEducation = ({ time, university, colleg, place, depertment }) => {
   return (
     <div>
-      <div className="border-l-8 border-indigo-300 p-2 mx-2 text-xs  md:text-2xl text-gray-500">
-        <div className="border-2 w-[200px] md:w-[550px] lg:w-[600px] border-gray-300 p-3 rounded-lg">
+      <div className="border-l-8 border-indigo-300 p-2 mx-2 text-xs  md:text-base text-gray-500">
+        <div className="border-2 w-[100%] border-gray-300 p-3 rounded-lg">
           <ul className="flex text-xl md:text-3xl gap-4">
             <BiSolidCalendar />
             <h2>{time}</h2>

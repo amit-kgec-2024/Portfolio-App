@@ -50,7 +50,7 @@ function ResumeSec() {
             <span className="text-accent">Re</span>sume
           </h2>
           <div className="border-2 w-14 mt-4 border-sky-400" />
-          <div className="flex flex-col lg:flex-row gap-6 p-4">
+          <div className="flex flex-col  gap-6 p-4">
             <div>
               <h2 className="text-2xl lg:text-4xl font-bold">
                 Edu<span className="text-accent">cation</span>
