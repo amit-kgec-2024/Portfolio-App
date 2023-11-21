@@ -1,7 +1,6 @@
 import React from "react";
 import { AiOutlineHome, AiOutlineUser, AiOutlineMail } from "react-icons/ai";
 import { HiDocument } from "react-icons/hi";
-import { BiServer, BiBookContent } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 
 export default function NavSection() {
