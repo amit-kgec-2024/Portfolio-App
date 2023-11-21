@@ -12,6 +12,7 @@ function ProjectCard({ title, links, useTech }) {
       <p className="text-sx md:text-2xl p-8 text-gray-500 mt-10">{useTech}</p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href={links}
         className=" block m-10  transition duration-300 p-4 text-xl font-medium text-white rounded-md bg-emerald-400 hover:bg-green-300"
       >

@@ -110,6 +110,7 @@ export default function AboutCart() {
         <a
           href="https://github.com/amit-mandal-kgce?tab=repositories"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-4xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
         >
           <AiFillGithub />
@@ -117,6 +118,7 @@ export default function AboutCart() {
         <a
           href="https://www.linkedin.com/in/amit-mandal-82685a227"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-4xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
         >
           <AiFillLinkedin />
@@ -124,6 +126,7 @@ export default function AboutCart() {
         <a
           href="https://twitter.com/Matrix0Amit?t=tWWaaG-gUArP_kgzZPJ_Bg&s=09"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-4xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
         >
           <AiFillTwitterCircle />
@@ -131,6 +134,7 @@ export default function AboutCart() {
         <a
           href="https://instagram.com/its_me__otis?igshid=MzNlNGNkZWQ4Mg=="
           target="_blank"
+          rel="noopener noreferrer"
           className="text-4xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
         >
           <AiFillInstagram />
@@ -138,6 +142,7 @@ export default function AboutCart() {
         <a
           href="https://www.facebook.com/profile.php?id=100009147136594&mibextid=ZbWKwL"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-4xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
         >
           <AiFillFacebook />
@@ -145,6 +150,7 @@ export default function AboutCart() {
         <a
           href="https://vercel.com/amit-mandals-projects"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-4xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
         >
           <IoLogoVercel />
@@ -154,6 +160,7 @@ export default function AboutCart() {
         <a
           href="https://drive.google.com/file/d/1eMa_Zv5qXvWObpwKH8KDlRy8nWmTj3vH/view?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           className="mx-20 p-3 px-4 text-xl bg-cyan-300 hover:bg-cyan-400 rounded-md transition duration-300"
         >
           Reasume
