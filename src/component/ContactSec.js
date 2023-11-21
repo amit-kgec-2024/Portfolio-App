@@ -29,41 +29,41 @@ export default function ContactSec() {
   };
 
   return (
-    <main className=" ld:w-[80%] lg:pl-[20%] relative" id="contact">
+    <main className=" ld:w-[80%] lg:pl-[20%] relative top-[40px] lg:top-0" id="contact">
       <div
         className="p-6"
       >
-        <h1 className="font-bold text-center text-white text-2xl md:text-4xl my-6">
+        <h1 className="font-bold text-center text-green-600 text-2xl md:text-4xl my-6">
           Contact <span className="text-accent">Me!</span>
         </h1>
-        <div className="flex flex-col lg:flex-row gap-2 mx-10 md:mx-28">
+        <div className="flex flex-col-reverse lg:flex-row gap-2 mx-10 md:mx-28">
           <ul className=" md:mx-2 my-6 md:w-[80%] lg:w-[50%]">
             <h1 className="text-center text-2xl text-teal-800 my-6 font-bold">
               <span>Get in Touch</span>
             </h1>
-            <li className="flex flex-row gap-4 text-gray-500 text-md my-3">
-              <FaUser className="my-4 text-2xl lg:text-3xl text-red-700" />
+            <li className="flex flex-row gap-4 text-gray-500 text-sm sm:text-md my-3">
+              <FaUser className="my-3 text-2xl lg:text-3xl text-red-700" />
               <div>
                 <h1>Name</h1>
                 <h2>Amit Mandal</h2>
               </div>
             </li>
-            <li className="flex flex-row gap-4 text-gray-500 text-md my-3">
-              <IoIosMail className="my-4 text-2xl lg:text-3xl text-red-700" />
+            <li className="flex flex-row gap-4 text-gray-500 text-sm sm:text-md my-3">
+              <IoIosMail className="my-3 text-2xl lg:text-3xl text-red-700" />
               <div>
                 <h1>Gmail</h1>
                 <h2>amitmandalbetai@gmail.com</h2>
               </div>
             </li>
-            <li className="flex flex-row gap-4 text-gray-500 text-md my-3">
-              <FaLocationDot className="my-4 text-2xl lg:text-3xl text-red-700" />
+            <li className="flex flex-row gap-4 text-gray-500 text-sm sm:text-md my-3">
+              <FaLocationDot className="my-3 text-2xl lg:text-3xl text-red-700" />
               <div>
                 <h1>Addres</h1>
                 <h2>Kalyani, Nadia, W.B, India</h2>
               </div>
             </li>
-            <li className="flex flex-row gap-4 text-gray-500 text-md my-3">
-              <IoCall className="my-4 text-2xl lg:text-3xl text-red-700" />
+            <li className="flex flex-row gap-4 text-gray-500 text-sm sm:text-md my-3">
+              <IoCall className="my-3 text-2xl lg:text-3xl text-red-700" />
               <div>
                 <h1>Mobil Number</h1>
                 <h2>+918513089660</h2>

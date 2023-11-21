@@ -41,7 +41,7 @@ const dataA = [
 function ResumeSec() {
   return (
     <main
-      className="lg:w-[80%] lg:left-[20%] relative"
+      className="lg:w-[80%] lg:left-[20%] relative top-[40px] lg:top-0"
       id="resume"
     >
       <div className="container p-8">

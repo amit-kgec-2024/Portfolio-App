@@ -6,7 +6,7 @@ import AboutProfSkill from "./AboutProfSkill";
 function AboutSec() {
   return (
     <main
-      className="w-full lg:w-[80%] lg:ml-[20%] relative"
+      className="w-full lg:w-[80%] lg:ml-[20%] top-[44px] lg:top-0 relative"
       id="about"
     >
       <div className="container p-8">
