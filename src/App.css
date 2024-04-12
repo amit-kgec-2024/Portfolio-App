@@ -1,4 +1,39 @@
 .active{
     color: #09e0ef;
-    /* border-bottom: 3px solid #EC2D9E; */
+}
+body {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #2e2d2d;
+}
+.navigation-button {
+    transition: all 1s;
+}
+
+.navigation-button:hover {
+    color: #146327;
+}
+.naviget-text {
+    color: #068524;
+    transition: all 1s;
+}
+.naviget-text:hover {
+    color: #054405;
 }
