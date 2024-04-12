@@ -12,6 +12,7 @@ import {
   AiFillFacebook,
 } from "react-icons/ai";
 import Contact from "./component/Contact";
+import Projects from "./component/Projects";
 
 
 function App() {
@@ -150,7 +151,10 @@ function App() {
               <h1 className="text-3xl font-extrabold uppercase">
                 8+ different Works
               </h1>
-              <button className="text-sm font-bold uppercase flex items-center py-14 gap-4">
+              <button
+                onClick={() => handelContactClick('projects')}
+                className="text-sm font-bold uppercase flex items-center py-14 gap-4"
+              >
                 <h1>See my projects</h1>
                 <LuMoveUpRight className="text-4xl" />
               </button>
@@ -262,7 +266,8 @@ function App() {
         </div>
       </div>
       {isContact === "navbar" && <Navbar />}
-      {isContact === "contact" && <Contact  />}
+      {isContact === "contact" && <Contact />}
+      {isContact === 'projects' && <Projects/>}
     </div>
   );
 }
