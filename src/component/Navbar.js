@@ -1,35 +1,18 @@
-import React, { useState } from "react";
-import { BsFilterRight } from "react-icons/bs";
-import App from "../App";
-import Contact from "./Contact";
-import Projects from "./Projects";
+import React from "react";
 
-const Navbar = () => {
-  const [activeNav, setActiveNav] = useState(null);
-  const handelActiveClick = (toggleNav) => {
-    setActiveNav(toggleNav);
-  };
+const Navbar = ({ handelContactClick }) => {
+
   const handelResume = () => {
     window.open(
-      "https://drive.google.com/file/d/1Sveit8xThDaGdmEehTu_2OoPaGMU__YI/view?usp=drive_link",
+      "https://drive.google.com/drive/folders/1T0zDAeHFH_IF4Z0i0pbjp3Se99ILUftW?usp=drive_link",
       "_blank"
     );
   };
   return (
     <div className="">
       <div
-        className={`absolute w-full h-screen  bg-dark1 drop-shadow-2xl ${
-          activeNav ? "hidden" : ""
-        }`}
+        className={`w-full bg-dark1 shadow-2xl`}
       >
-        <div className="flex flex-row justify-between items-center p-4">
-          <p className="navigation-button text-xl text-end py-3 font-bold text-slate-400">
-            Portfo<span className="text-whitmix1">lio.</span>
-          </p>
-          <button className="navigation-button my-4 mx-4 text-3xl text-slate-400">
-            <BsFilterRight />
-          </button>
-        </div>
         <div className="flex md:flex-row text-slate-400 py-4 px-6 md:px-12 justify-between text-center ">
           <div className="hidden w-full md:flex flex-col justify-between py-16 pl-12">
             <div className="text-start">
@@ -51,13 +34,13 @@ const Navbar = () => {
           </div>
           <div className="text-6xl py-20 md:py-20 md:text-8xl w-full gap-4 md:gap-6 font-extrabold flex flex-col items-center md:items-end">
             <button
-              onClick={() => handelActiveClick("home")}
+              onClick={() => handelContactClick("home")}
               className="navigation-button uppercase animate-text-colorone-left-to-right"
             >
               Home
             </button>
             <button
-              onClick={() => handelActiveClick("projects")}
+              onClick={() => handelContactClick("projects")}
               className="navigation-button uppercase animate-text-colorone-left-to-right"
             >
               Projects
@@ -69,7 +52,7 @@ const Navbar = () => {
               Resume
             </button>
             <button
-              onClick={() => handelActiveClick("contact")}
+              onClick={() => handelContactClick("contact")}
               className="navigation-button uppercase animate-text-colorone-left-to-right"
             >
               Contact
@@ -77,9 +60,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {activeNav === "home" && <App />}
-      {activeNav === "contact" && <Contact />}
-      {activeNav === "projects" && <Projects />}
       <style>
         {`
            .animate-text-color-left-to-right {

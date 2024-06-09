@@ -17,7 +17,7 @@ const projectData = [
   },
   {
     id: 2,
-    projectImg: "project1.png",
+    projectImg: "medicalimage.png",
     projectName: "brain-stroke",
     linksProject: "https://github.com/amit-kgec-2024/brain-stroke",
     projectDetails:

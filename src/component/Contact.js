@@ -1,14 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { BsFilterRight } from "react-icons/bs";
 import Input from "./Input";
-import Navbar from "./Navbar";
+import Loader from "./Loader";
 
 const Contact = () => {
-  const [isNavbar, setIsNavbar] = useState(false);
-  const handleNavbarClick = () => {
-    setIsNavbar((prev) => !prev);
-  };
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
   const form = useRef();
 
@@ -34,22 +36,9 @@ const Contact = () => {
 
   return (
     <div>
-      <div
-        className={`bg-dark6 absolute top-0 left-0 z-50 w-full h-screen ${
-          isNavbar ? "hidden" : "opacity-100 text-teal-500"
-        }`}
+      {loading ? <Loader/> : <div
+        className="p-3"
       >
-        <div className="flex flex-row justify-between items-center p-4">
-          <p className="navigation-button text-xl text-end py-3 font-bold text-white">
-            Portfolio.
-          </p>
-          <button
-            className="navigation-button my-4 mx-4 text-3xl"
-            onClick={handleNavbarClick}
-          >
-            <BsFilterRight />
-          </button>
-        </div>
         <div className="px-6">
           <form ref={form} onSubmit={sendEmail} className="flex flex-col">
             <Input type="text" name="from_name" label="NAME" />
@@ -75,8 +64,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
-      </div>
-      {isNavbar && <Navbar />}
+      </div>}
     </div>
   );
 };

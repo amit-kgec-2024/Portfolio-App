@@ -7,13 +7,13 @@ const Loader = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShowFirstImage((prev) => !prev);
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
   return (
     <div>
-      <div className="w-full h-screen flex items-center justify-center bg-dark2">
+      <div className="w-full h-screen absolute top-0 left-0 z-50 flex items-center justify-center bg-dark2">
         <div
           className={`animate-image ${showFirstImage ? "fade-in" : "fade-out"}`}
         >
@@ -23,7 +23,7 @@ const Loader = () => {
           className={`animate-image ${showFirstImage ? "fade-out" : "fade-in"}`}
         >
           <img
-            src="tiger.png"
+            src="tiger.svg"
             alt="Tiger"
             width={300}
             height={300}

@@ -1,28 +1,20 @@
-import React, { useState } from "react";
-import { BsFilterRight } from "react-icons/bs";
-import App from "../App";
+import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjcetData from "../utils/projectData";
+import Loader from "./Loader";
 
 const Projects = () => {
-  const [activeProject, setActiveProject] = useState(null);
-  const handelProjectClick = (toggleProject) => {
-    setActiveProject(toggleProject);
-  };
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
   return (
     <div>
-      <div className={`bg-teal-100 w-full ${activeProject ? "hidden" : ""}`}>
-        <div className="flex flex-row justify-between items-center p-4">
-          <p className="navigation-button text-xl text-end py-3 font-bold text-whit">
-            Portfolio.
-          </p>
-          <button
-            className="navigation-button my-4 mx-4 text-3xl"
-            onClick={() => handelProjectClick("home")}
-          >
-            <BsFilterRight />
-          </button>
-        </div>
+      {loading ? <Loader/> : <div className={`bg-teal-100 p-2 w-full`}>
         <div className="grid sm:grid-cols-2 gap-10 px-5 sm:px-16 justify-between">
           {ProjcetData.slice()
             .reverse()
@@ -36,8 +28,7 @@ const Projects = () => {
               />
             ))}
         </div>
-      </div>
-      {activeProject === "home" && <App />}
+      </div>}
     </div>
   );
 };

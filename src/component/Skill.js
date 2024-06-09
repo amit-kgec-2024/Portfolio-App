@@ -1,59 +1,69 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaChevronRight } from "react-icons/fa";
 import skillData from '../utils/skillData';
+import Loader from './Loader';
 
 const Skill = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
   return (
     <div className="">
-      <h1 className="w-full flex flex-col items-center text-5xl font-bold uppercase md:text-7xl animate-text-colorone-left-to-right">
-        Skills
-        <span className="w-[40%] h-2 my-3 bg-red-400 rounded-full animate-background-color-left-to-right"></span>
-      </h1>
-      <div className="text-7xl flex flex-row justify-around p-4 animate-arrow-color-change">
-        <div className="flex">
-          <FaChevronRight />
-          <FaChevronRight />
-          <FaChevronRight />
-          <FaChevronRight />
-        </div>
-        <div className="flex">
-          <FaChevronRight />
-          <FaChevronRight />
-          <FaChevronRight />
-          <FaChevronRight />
-        </div>
-        <div className="flex">
-          <FaChevronRight />
-          <FaChevronRight />
-          <FaChevronRight />
-          <FaChevronRight />
-        </div>
-      </div>
-      <div className="w-full flex flex-wrap items-center justify-center p-5 gap-5">
-        {skillData.map((ele, index) => (
-          <div
-            key={index}
-            className="w-44 h-48 shadow-2xl rounded-md flex flex-col items-center justify-around bg-dark3 p-3"
-          >
-            <div className="border-4 border-b-teal-400 border-t-pink-400 border-l-yellow-400 border-r-green-400 rounded-full flex justify-center p-1 items-center w-[55%] h-[50%] animate-rotate-left-to-right">
-              <img
-                src={ele.skillImg}
-                alt="Bird"
-                width={80}
-                height={80}
-                className="animate-rotate-right-to-left"
-              />
-            </div>
-            <h1 className="font-bold uppercase">{ele.skillname}</h1>
-            <div className="w-full h-3 bg-white rounded-full flex overflow-hidden">
-              <div
-                className={`animate-background-color-left-to-right `}
-                style={{ width: `${ele.widthpercent}%` }}
-              ></div>
-            </div>
+      {loading ? <Loader/> : <div className="">
+        <h1 className="w-full flex flex-col items-center text-5xl font-bold uppercase md:text-7xl animate-text-colorone-left-to-right">
+          Skills
+          <span className="w-[40%] h-2 my-3 bg-red-400 rounded-full animate-background-color-left-to-right"></span>
+        </h1>
+        <div className="text-7xl flex flex-row justify-around p-4 animate-arrow-color-change">
+          <div className="flex">
+            <FaChevronRight />
+            <FaChevronRight />
+            <FaChevronRight />
+            <FaChevronRight />
           </div>
-        ))}
-      </div>
+          <div className="flex">
+            <FaChevronRight />
+            <FaChevronRight />
+            <FaChevronRight />
+            <FaChevronRight />
+          </div>
+          <div className="flex">
+            <FaChevronRight />
+            <FaChevronRight />
+            <FaChevronRight />
+            <FaChevronRight />
+          </div>
+        </div>
+        <div className="w-full h-screen bg-dark1 text-white flex flex-wrap items-center justify-center p-5 gap-10">
+          {skillData.map((ele, index) => (
+            <div
+              key={index}
+              className="w-44 h-48 shadow-2xl rounded-md flex flex-col items-center justify-around bg-dark3 p-3"
+            >
+              <div className="border-4 border-b-teal-400 border-t-pink-400 border-l-yellow-400 border-r-green-400 rounded-full flex justify-center p-1 items-center w-[55%] h-[50%] animate-rotate-left-to-right">
+                <img
+                  src={ele.skillImg}
+                  alt="Bird"
+                  width={80}
+                  height={80}
+                  className="animate-rotate-right-to-left"
+                />
+              </div>
+              <h1 className="font-bold uppercase">{ele.skillname}</h1>
+              <div className="w-full h-3 bg-white rounded-full flex overflow-hidden">
+                <div
+                  className={`animate-background-color-left-to-right `}
+                  style={{ width: `${ele.widthpercent}%` }}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>}
       <style>{`
       .animate-background-color-left-to-right {
             background: linear-gradient(to right, red, dodgerblue, green, yellow);
