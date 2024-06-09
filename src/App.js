@@ -1,61 +1,33 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsFilterRight } from "react-icons/bs";
-import Navbar from './component/Navbar';
+import Navbar from "./component/Navbar";
 import { LuMoveUpRight } from "react-icons/lu";
-import { IoLogoVercel } from "react-icons/io5";
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiFillTwitterCircle,
-  AiFillInstagram,
-  AiFillFacebook,
-} from "react-icons/ai";
 import Contact from "./component/Contact";
 import Projects from "./component/Projects";
-
+import HomeProjects from "./component/HomeProjects";
+import Skill from "./component/Skill";
+import Loader from "./component/Loader";
+import Socialmedia from "./component/Socialmedia";
 
 function App() {
   const [isContact, setIsContact] = useState(null);
   const handelContactClick = (toggleContact) => {
     setIsContact(toggleContact);
   };
-  const handelGithub = () => {
-    window.open(
-      "https://github.com/amit-mandal-kgce?tab=repositories",
-      "_blank"
-    );
-  };
-  const handelLinkdin = () => {
-    window.open("https://www.linkedin.com/in/amit-mandal-82685a227", "_blank");
-  };
-  const handelTwiter = () => {
-    window.open(
-      "https://twitter.com/Matrix0Amit?t=tWWaaG-gUArP_kgzZPJ_Bg&s=09",
-      "_blank"
-    );
-  };
-  const handelInstgram = () => {
-    window.open(
-      "https://instagram.com/its_me__otis?igshid=MzNlNGNkZWQ4Mg==",
-      "_blank"
-    );
-  };
-  const handelFacebook = () => {
-    window.open(
-      "https://www.facebook.com/profile.php?id=100009147136594&mibextid=ZbWKwL",
-      "_blank"
-    );
-  };
-  const handelVercel = () => {
-    window.open("https://vercel.com/amit-mandals-projects", "_blank");
-  };
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
   return (
     <div className="">
-      <div className={`bg-dark1 w-full h-screen ${isContact ? "hidden" : ""}`}>
+      {loading ? <Loader/> : <div className={`bg-dark1 w-full h-screen ${isContact ? "hidden" : ""}`}>
         <div className="w-full bg-dark1 flex flex-col drop-shadow-2xl z-40">
           <div className="flex flex-row justify-between items-center p-4">
-            <p className="navigation-button text-xl text-end py-3 font-bold text-slate-400">
+            <p className="navigation-button w-32 text-center text-xl py-3 font-bold text-slate-400 animate-text-big-to-small">
               Portfo<span className="text-whitmix1">lio.</span>
             </p>
             <button
@@ -67,11 +39,13 @@ function App() {
           </div>
         </div>
         <div className="text-white bg-dark1 flex flex-col justify-around">
-          <div className="p-4 py-10 flex flex-col sm:flex-row-reverse w-full sm:justify-between sm:items-center">
-            <div className="w-28 h-28 rounded-full overflow-hidden">
-              <img src="about.jpg" alt="Bird" />
+          <div className="p-4 py-10 flex flex-col sm:flex-row-reverse w-full sm:justify-around sm:items-center">
+            <div className="p-3 bg-gradient-to-r from-blue-400 via-red-500 to-yellow-400 rounded-full animate-rotate-left-to-right">
+              <div className="w-28 h-28 rounded-full overflow-hidden animate-rotate-right-to-left">
+                <img src="about.jpg" alt="Bird" />
+              </div>
             </div>
-            <h1 className="navigation-button text-4xl md:text-7xl md:pl-10 py-2 uppercase font-extrabold">
+            <h1 className="navigation-button text-4xl md:text-7xl md:pl-10 py-2 uppercase font-extrabold animate-text-color-left-to-right">
               amit Mandal
             </h1>
           </div>
@@ -83,19 +57,19 @@ function App() {
               <h2 className="text-3xl uppercase font-extrabold">Development</h2>
               <button className="text-sm font-bold uppercase flex items-center gap-4">
                 <h1>Creative identity and ui/ux</h1>
-                <LuMoveUpRight className="text-4xl" />
+                <LuMoveUpRight className="h-10 animate-text-small-to-big" />
               </button>
               <button className="text-sm font-bold uppercase flex items-center gap-4">
                 <h1>Website development</h1>
-                <LuMoveUpRight className="text-4xl" />
+                <LuMoveUpRight className="h-10 animate-text-small-to-big" />
               </button>
               <button className="text-sm font-bold uppercase flex items-center gap-4">
                 <h1>Blockchain application development</h1>
-                <LuMoveUpRight className="text-4xl" />
+                <LuMoveUpRight className="h-10 animate-text-small-to-big" />
               </button>
               <button className="text-sm font-bold uppercase flex items-center gap-4">
                 <h1>Native application development</h1>
-                <LuMoveUpRight className="text-4xl" />
+                <LuMoveUpRight className="h-10 animate-text-small-to-big" />
               </button>
             </div>
             <div className="flex flex-col justify-between w-full">
@@ -106,63 +80,27 @@ function App() {
               </p>
               <button className="text-sm font-bold uppercase flex items-center py-6 gap-4">
                 <h1>See my experience</h1>
-                <LuMoveUpRight className="text-4xl" />
+                <LuMoveUpRight className="h-10 animate-text-small-to-big" />
               </button>
-              <div className="flex flex-row w-full justify-around">
-                <button
-                  onClick={handelGithub}
-                  className="text-2xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
-                >
-                  <AiFillGithub />
-                </button>
-                <button
-                  onClick={handelLinkdin}
-                  className="text-2xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
-                >
-                  <AiFillLinkedin />
-                </button>
-                <button
-                  onClick={handelTwiter}
-                  className="text-2xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
-                >
-                  <AiFillTwitterCircle />
-                </button>
-                <button
-                  onClick={handelInstgram}
-                  className="text-2xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
-                >
-                  <AiFillInstagram />
-                </button>
-                <button
-                  onClick={handelFacebook}
-                  className="text-2xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
-                >
-                  <AiFillFacebook />
-                </button>
-                <button
-                  onClick={handelVercel}
-                  className="text-2xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
-                >
-                  <IoLogoVercel />
-                </button>
-              </div>
+              <Socialmedia />
             </div>
             <div className="sm:flex flex-col hidden justify-between w-full">
               <h1 className="text-3xl font-extrabold uppercase">
                 8+ different Works
               </h1>
               <button
-                onClick={() => handelContactClick('projects')}
+                onClick={() => handelContactClick("projects")}
                 className="text-sm font-bold uppercase flex items-center py-14 gap-4"
               >
                 <h1>See my projects</h1>
-                <LuMoveUpRight className="text-4xl" />
+                <LuMoveUpRight className="h-10 animate-text-small-to-big" />
               </button>
               <h2 className="font-bold text-sm uppercase">
-                amitmandal@gmail.com
+                amit.kgec.2024@gmail.com
               </h2>
             </div>
           </div>
+          <Skill />
           <div className="uppercase py-5 sm:py-10 lg:py-16 px-3 w-full text-center">
             <h1 className="naviget-text text-3xl sm:text-5xl lg:text-7xl font-extrabold ">
               Work experience
@@ -177,17 +115,20 @@ function App() {
               The world infront of you is more than what you see!
             </h1>
             <div className="w-full flex justify-center py-4">
-              <button className="px-5 md:px-10 py-3 font-extrabold uppercase border">
+              <button
+                onClick={() => handelContactClick("homeproject")}
+                className="px-5 md:px-10 py-3 font-extrabold uppercase border"
+              >
                 See more projects
               </button>
             </div>
           </div>
           <div className="px-8 md:px-20">
-            <h1 className="text-7xl py-4 sm:py-0 md:text-9xl uppercase font-extrabold">
+            <h1 className="text-7xl py-4 sm:py-0 md:text-9xl uppercase font-extrabold animate-text-colorone-left-to-right">
               drop
             </h1>
             <div className="flex flex-row items-center justify-between">
-              <h1 className="text-7xl py-4 sm:py-0 md:text-9xl uppercase font-extrabold">
+              <h1 className="text-7xl py-4 sm:py-0 md:text-9xl uppercase font-extrabold animate-text-color-left-to-right">
                 me
               </h1>
               <div className="hidden sm:block">
@@ -201,7 +142,7 @@ function App() {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row w-full justify-between sm:items-center gap-8 md:gap-14">
-              <h1 className="text-7xl py-4 sm:py-0 md:text-9xl uppercase font-extrabold">
+              <h1 className="text-7xl py-4 sm:py-0 md:text-9xl uppercase font-extrabold animate-text-colorone-left-to-right">
                 A
               </h1>
               <div className="">
@@ -216,58 +157,124 @@ function App() {
                   send message
                 </button>
               </div>
-              <h1 className="text-7xl py-4 sm:py-0 md:text-9xl uppercase font-extrabold">
+              <h1 className="text-7xl py-4 sm:py-0 md:text-9xl uppercase font-extrabold animate-text-color-left-to-right">
                 line
               </h1>
             </div>
             <div className="flex flex-col py-5 border-t-2 md:flex-row justify-around items-center w-full">
-              <h1 className="font-bold">Copyright@amitmandal2024</h1>
-              <div className="flex flex-row py-5 md:py-0 gap-4 md:gap-10 justify-around">
-                <button
-                  onClick={handelGithub}
-                  className="text-2xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
-                >
-                  <AiFillGithub />
-                </button>
-                <button
-                  onClick={handelLinkdin}
-                  className="text-2xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
-                >
-                  <AiFillLinkedin />
-                </button>
-                <button
-                  onClick={handelTwiter}
-                  className="text-2xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
-                >
-                  <AiFillTwitterCircle />
-                </button>
-                <button
-                  onClick={handelInstgram}
-                  className="text-2xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
-                >
-                  <AiFillInstagram />
-                </button>
-                <button
-                  onClick={handelFacebook}
-                  className="text-2xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
-                >
-                  <AiFillFacebook />
-                </button>
-                <button
-                  onClick={handelVercel}
-                  className="text-2xl my-2 hover:text-blue-200 text-teal-500 transition duration-300"
-                >
-                  <IoLogoVercel />
-                </button>
+              <h1 className="font-bold">Copyright@amit.kgec.2024</h1>
+              <div className="w-[30%]">
+                <Socialmedia />
               </div>
-              <h2 className="font-bold">amitmandalbetai@gmail.com</h2>
+              <h2 className="font-bold">amit.kgec.2024@gmail.com</h2>
             </div>
           </div>
         </div>
-      </div>
+      </div>}
       {isContact === "navbar" && <Navbar />}
       {isContact === "contact" && <Contact />}
-      {isContact === 'projects' && <Projects/>}
+      {isContact === "projects" && <Projects />}
+      {isContact === "homeproject" && <HomeProjects />}
+      <style>
+        {`
+        .animate-rotate-left-to-right {
+    animation: rotate-left-to-right 4s linear infinite;
+}
+.animate-rotate-right-to-left {
+    animation: rotate-right-to-left 4s linear infinite;
+}
+
+@keyframes rotate-left-to-right {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-right-to-left {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+    /* Animation for increasing text size */
+.animate-text-small-to-big {
+    animation: text-small-to-big 3s linear infinite;
+}
+
+@keyframes text-small-to-big {
+    0% {
+        font-size: 20px;
+    }
+
+    100% {
+        font-size: 40px;
+    }
+}
+
+/* Animation for decreasing text size */
+.animate-text-big-to-small {
+    animation: text-big-to-small 5s linear infinite;
+}
+@keyframes text-big-to-small {
+    0% {
+        font-size: 25px;
+    }
+        5%{
+        transform: rotate(-10deg);
+        }
+        10%{
+        transform: rotate(10deg);
+        }
+        15%{
+        transform: rotate(0deg);
+        }
+
+    100% {
+        font-size: 15px;
+    }
+}
+
+    .animate-text-color-left-to-right {
+            background: linear-gradient(to right, red, yellow, green, blue, purple);
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: text-color-left-to-right 4s linear infinite;
+        }
+
+        @keyframes text-color-left-to-right {
+            0% {
+                background-position: 0% 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+            .animate-text-colorone-left-to-right {
+            background: linear-gradient(to right, white, dodgerblue, white, white);
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: text-colorone-left-to-right 4s linear infinite;
+        }
+
+        @keyframes text-colorone-left-to-right {
+            0% {
+                background-position: 0% 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+        `}
+      </style>
     </div>
   );
 }

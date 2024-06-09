@@ -3,7 +3,7 @@ const projectData = [
     id: 0,
     projectImg: "project1.png",
     projectName: "Portfolio",
-    linksProject: "https://amit-mandal-kgce.github.io/My-Portfolio-HTML/",
+    linksProject: "https://amit-kgec-2024.github.io/My-Portfolio-HTML/",
     projectDetails:
       "My first portfolio website, this portfolio are uses techonology HTML, CSS and Javascript.",
   },
@@ -11,7 +11,7 @@ const projectData = [
     id: 1,
     projectImg: "project2.png",
     projectName: "INDUSTRIAL-PROJECTS",
-    linksProject: "https://github.com/amit-mandal-kgce/INDUSTRIAL-PROJECTS",
+    linksProject: "https://github.com/amit-kgec-2024/INDUSTRIAL-PROJECTS",
     projectDetails:
       "Cycling is a green and healthy choice. This project aims to make the cycle a more accessible vehicle. The project thus aims to reintroduce the bicycle with more user friendly and low cost features. An attempt will be made to model a similar design for the simple bicycles.",
   },
@@ -19,7 +19,7 @@ const projectData = [
     id: 2,
     projectImg: "project1.png",
     projectName: "brain-stroke",
-    linksProject: "https://github.com/amit-mandal-kgce/brain-stroke",
+    linksProject: "https://github.com/amit-kgec-2024/brain-stroke",
     projectDetails:
       "Medical image processing is a field of study that focuses on the application of image processing techniques to medical images. Medical images can include medical images such as X-rays, CT scans, and MRI scans, as well as microscopic images of cells and tissues. The goal of medical image processing is to improve the accuracy and efficiency of medical diagnosis and treatment.",
   },
@@ -27,7 +27,7 @@ const projectData = [
     id: 3,
     projectImg: "project3.png",
     projectName: "Libery-Frontend",
-    linksProject: "https://amit-mandal-kgce.github.io/Libery-Frontend/",
+    linksProject: "https://amit-kgec-2024.github.io/Libery-Frontend/",
     projectDetails:
       "Student Library is my Fourth project here i made a Forntent Website and some description Books. Here we discuss about some About Library here we also develop a Contact us but in this Project i don't use any Backend but in feature we would also develop it's backend. So, this is my project Student Library.",
   },
@@ -35,7 +35,7 @@ const projectData = [
     id: 4,
     projectImg: "project4.png",
     projectName: "Food-Shop-Frontend",
-    linksProject: "https://amit-mandal-kgce.github.io/Food-Shop-Frontend/",
+    linksProject: "https://amit-kgec-2024.github.io/Food-Shop-Frontend/",
     projectDetails:
       "Le Catering is my Third project here i made a Forntent Website and some description Foods Our Menu. Here we discuss about some About Catering and Our Menu here we also develop a Contact us but in this Project i don't use any Backend but in feature we would also develop it's backend. So, this is my project Le Catering.",
   },
@@ -43,7 +43,7 @@ const projectData = [
     id: 5,
     projectImg: "project5.png",
     projectName: "Online-Tutorial",
-    linksProject: "https://amit-mandal-kgce.github.io/Online-Tutorial/",
+    linksProject: "https://amit-kgec-2024.github.io/Online-Tutorial/",
     projectDetails:
       "A N A S is my first project here i made a sign up and sign In page and some description about me and my friends. Here we discuss about some ML using Python, Web Development, App Development, Internet of Things(IOT), Matlab Langauge and Vlsi Design here we also develop a Payment page for Register the Course but in this Project i don't use any Backend but in feature we would also develop it's backend. So, this is my project A N A S - Tutorial.",
   },
@@ -51,7 +51,7 @@ const projectData = [
     id: 6,
     projectImg: "project6.png",
     projectName: "Login-page-Frontend",
-    linksProject: "https://amit-mandal-kgce.github.io/Login-page-Frontend2/",
+    linksProject: "https://amit-kgec-2024.github.io/Login-page-Frontend2/",
     projectDetails:
       "Registration Format is my Fifth project here i made a Forntent Website and some description Books. Here we discuss about some About Library here we also develop a Contact us but in this Project i don't use any Backend but in feature we would also develop it's backend. So, this is my project Registration Format.",
   },
@@ -59,7 +59,7 @@ const projectData = [
     id: 7,
     projectImg: "project7.png",
     projectName: "Register-page-Frontend",
-    linksProject: "https://amit-mandal-kgce.github.io/Register-page-Frontend1/",
+    linksProject: "https://amit-kgec-2024.github.io/Register-page-Frontend1/",
     projectDetails:
       "Registration Format is my Fifth project here i made a Forntent Website and some description Books. Here we discuss about some About Library here we also develop a Contact us but in this Project i don't use any Backend but in feature we would also develop it's backend. So, this is my project Registration Format.",
   },
@@ -67,7 +67,7 @@ const projectData = [
     id: 8,
     projectImg: "project8.png",
     projectName: "Frontend-pages",
-    linksProject: "https://amit-mandal-kgce.github.io/Frontend-pages1/",
+    linksProject: "https://amit-kgec-2024.github.io/Frontend-pages1/",
     projectDetails:
       "Le Catering is my Third project here i made a Forntent Website and some description Foods Our Menu. Here we discuss about some About Catering and Our Menu here we also develop a Contact us but in this Project i don't use any Backend but in feature we would also develop it's backend. So, this is my project Le Catering.",
   },
@@ -75,7 +75,7 @@ const projectData = [
     id: 9,
     projectImg: "project9.png",
     projectName: "Weather-Application",
-    linksProject: "https://amit-mandal-kgce.github.io/Weather-Application1/",
+    linksProject: "https://amit-kgec-2024.github.io/Weather-Application1/",
     projectDetails:
       "Used Technology : HTML, CSS, javascript etc. Designed and built a dynamic online Weather checking. This portal are showing any Cuntry, City Weathers and Showes Huminaty, Wind Speed. For projects are use OpenWeather API Kyes and Built-in API.",
   },
@@ -83,8 +83,7 @@ const projectData = [
     id: 10,
     projectImg: "project10.png",
     projectName: "E-commerce-HTML",
-    linksProject:
-      "https://amit-mandal-kgce.github.io/E-commerce-Frontend-HTML/",
+    linksProject: "https://amit-kgec-2024.github.io/E-commerce-Frontend-HTML/",
     projectDetails:
       "Used Technology : HTML, CSS, javascript etc. Designed and built a dynamic online shopping portal offering a variety of products such as electronics, books, Sports, Laptops, Mobiles, Watches, Two Wheelers, Appliances, Grocery, Fashion and various equipments. Developed interactive features for browsing, detailed product exploration. Ensured a seamless and engaging shopping journey through intuitive interface elements.",
   },
@@ -92,7 +91,7 @@ const projectData = [
     id: 11,
     projectImg: "project11.png",
     projectName: "Frontend-pages",
-    linksProject: "https://amit-mandal-kgce.github.io/Frontend-pages2/",
+    linksProject: "https://amit-kgec-2024.github.io/Frontend-pages2/",
     projectDetails:
       "Used Technology : HTML, javascript etc. Designed and built a Business Consulting Company. This portal are showing Business Consulting Company projects, Services, Plans & Pricing, Developing Innovative Strategies. For projects are use in Javascript code & Responsive",
   },
@@ -124,7 +123,7 @@ const projectData = [
     id: 15,
     projectImg: "project15.png",
     projectName: "WhatsApp_clone",
-    linksProject: "https://whats-app-clone-teal-ten.vercel.app/",
+    linksProject: "https://whats-app-clone-puce-mu.vercel.app/",
     projectDetails:
       "Used Technology : React js, Tailwind, javascript etc. Designed and built a dynamic online Chatting portal. This project are not not completed work in this time",
   },

@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { BsFilterRight } from "react-icons/bs";
-import App from '../../App';
-import Contact from '../Contact';
-import Projects from '../Projects';
-
+import App from "../App";
+import Contact from "./Contact";
+import Projects from "./Projects";
 
 const Navbar = () => {
   const [activeNav, setActiveNav] = useState(null);
-  const handelActiveClick = (toggleNav)=> {
+  const handelActiveClick = (toggleNav) => {
     setActiveNav(toggleNav);
-  }
+  };
   const handelResume = () => {
-    window.open("https://drive.google.com/file/d/1Sveit8xThDaGdmEehTu_2OoPaGMU__YI/view?usp=drive_link", "_blank");
+    window.open(
+      "https://drive.google.com/file/d/1Sveit8xThDaGdmEehTu_2OoPaGMU__YI/view?usp=drive_link",
+      "_blank"
+    );
   };
   return (
     <div className="">
@@ -31,7 +33,7 @@ const Navbar = () => {
         <div className="flex md:flex-row text-slate-400 py-4 px-6 md:px-12 justify-between text-center ">
           <div className="hidden w-full md:flex flex-col justify-between py-16 pl-12">
             <div className="text-start">
-              <h1 className="navigation-button text-7xl font-extrabold uppercase">
+              <h1 className="navigation-button text-7xl font-extrabold uppercase animate-text-color-left-to-right">
                 Amit Mandal
               </h1>
               <h2 className="text-xl font-light uppercase">
@@ -43,32 +45,32 @@ const Navbar = () => {
               <h2 className="text-lg font-light">+91 8513089660</h2>
               <h3 className="text-lg font-light">amitmandalbetai@gmail.com</h3>
             </div>
-            <h1 className="text-start text-xl font-light uppercase">
+            <h1 className="text-start text-xl font-light uppercase animate-text-colorone-left-to-right">
               Open for client projects
             </h1>
           </div>
           <div className="text-6xl py-20 md:py-20 md:text-8xl w-full gap-4 md:gap-6 font-extrabold flex flex-col items-center md:items-end">
             <button
               onClick={() => handelActiveClick("home")}
-              className="navigation-button uppercase"
+              className="navigation-button uppercase animate-text-colorone-left-to-right"
             >
               Home
             </button>
             <button
               onClick={() => handelActiveClick("projects")}
-              className="navigation-button uppercase"
+              className="navigation-button uppercase animate-text-colorone-left-to-right"
             >
               Projects
             </button>
             <button
               onClick={handelResume}
-              className="navigation-button uppercase"
+              className="navigation-button uppercase animate-text-colorone-left-to-right"
             >
               Resume
             </button>
             <button
               onClick={() => handelActiveClick("contact")}
-              className="navigation-button uppercase"
+              className="navigation-button uppercase animate-text-colorone-left-to-right"
             >
               Contact
             </button>
@@ -77,9 +79,45 @@ const Navbar = () => {
       </div>
       {activeNav === "home" && <App />}
       {activeNav === "contact" && <Contact />}
-      {activeNav === 'projects' && <Projects/>}
+      {activeNav === "projects" && <Projects />}
+      <style>
+        {`
+           .animate-text-color-left-to-right {
+            background: linear-gradient(to right, red, yellow, green, blue, purple);
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: text-color-left-to-right 4s linear infinite;
+        }
+
+        @keyframes text-color-left-to-right {
+            0% {
+                background-position: 0% 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+           .animate-text-colorone-left-to-right {
+            background: linear-gradient(to right, white, dodgerblue, white, white);
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: text-colorone-left-to-right 4s linear infinite;
+        }
+
+        @keyframes text-colorone-left-to-right {
+            0% {
+                background-position: 0% 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+        `}
+      </style>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
