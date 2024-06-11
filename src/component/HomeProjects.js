@@ -15,12 +15,12 @@ const HomeProjects = () => {
     <>
       {loading ? <Loader/> : <div className="w-full bg-slate-100 flex flex-col gap-4 p-5">
         {coreProects.map((element, index) => (
-          <div key={index} className="flex flex-row-reverse justify-around gap-8 p-5 shadow bg-dark6 text-white">
+          <div key={index} className="flex flex-col-reverse md:flex-row-reverse lg:flex-row-reverse justify-around items-center gap-8 p-5 shadow bg-dark6 text-white">
             <div className="flex flex-col justify-around items-center ">
               <h1 className="text-xl sm:text-3xl md:text-5xl font-extrabold uppercase text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-pink-500">
                 {element.projectName}
               </h1>
-              <p className="font-semibold py-4">{element.projectDetails}</p>
+              <p className="font-semibold text-xs md:text-base py-4">{element.projectDetails}</p>
               <div className="p-1 border-8 border-l-green-400 border-b-indigo-400 border-r-red-400 border-t-fuchsia-400 rounded-full animate-rotate-left-to-right">
                 <button
                   onClick={()=> window.open(`${element.linksProject}`, "_blank")}
