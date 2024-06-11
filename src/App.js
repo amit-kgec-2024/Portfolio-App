@@ -71,11 +71,11 @@ function App() {
 
 @keyframes text-small-to-big {
     0% {
-        font-size: 20px;
+        font-size: 10px;
     }
 
     100% {
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 

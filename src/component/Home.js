@@ -17,13 +17,13 @@ const Home = ({ handelContactClick }) => {
         <Loader />
       ) : (
         <div className="text-white bg-dark1 flex flex-col justify-around">
-          <div className="p-4 py-10 flex flex-col sm:flex-row-reverse w-full sm:justify-around sm:items-center">
-            <div className="p-3 shadow-2xl bg-gradient-to-r from-blue-400 via-red-500 to-yellow-400 rounded-full animate-rotate-left-to-right">
-              <div className="w-28 h-28 rounded-full shadow-2xl overflow-hidden animate-rotate-right-to-left">
+          <div className="p-4 py-10 flex flex-col items-center justify-center md:flex-row-reverse w-full sm:justify-around sm:items-center">
+            <div className="p-3 flex items-center justify-center shadow-2xl bg-gradient-to-r from-blue-400 via-red-500 to-yellow-400 rounded-full animate-rotate-left-to-right">
+              <div className="w-40 md:w-28 lg:w-32 h-40 md:h-28 lg:h-32 rounded-full shadow-2xl overflow-hidden animate-rotate-right-to-left">
                 <img src="about.jpg" alt="Bird" />
               </div>
             </div>
-            <h1 className="navigation-button text-4xl md:text-7xl md:pl-10 py-2 uppercase font-extrabold animate-text-color-left-to-right">
+            <h1 className="navigation-button text-4xl sm:text-5xl md:text-6xl lg:text-7xl md:pl-10 py-2 uppercase font-extrabold animate-text-color-left-to-right">
               amit Mandal
             </h1>
           </div>
@@ -33,20 +33,20 @@ const Home = ({ handelContactClick }) => {
                 Frontend + Backend
               </h1>
               <h2 className="text-3xl uppercase font-extrabold">Development</h2>
-              <button className="text-sm font-bold uppercase flex items-center gap-4">
-                <h1>Creative identity and ui/ux</h1>
+              <button className="text-xs md:text-sm font-bold uppercase flex justify-start items-center gap-4">
+                <h1 className="text-start">Creative identity and ui/ux</h1>
                 <LuMoveUpRight className="h-10 animate-text-small-to-big" />
               </button>
-              <button className="text-sm font-bold uppercase flex items-center gap-4">
-                <h1>Website development</h1>
+              <button className="text-xs md:text-sm font-bold uppercase flex items-center gap-4">
+                <h1 className="text-start">Website development</h1>
                 <LuMoveUpRight className="h-10 animate-text-small-to-big" />
               </button>
-              <button className="text-sm font-bold uppercase flex items-center gap-4">
-                <h1>Blockchain application development</h1>
+              <button className="text-xs md:text-sm font-bold uppercase flex items-center gap-4">
+                <h1 className="text-start">Blockchain application development</h1>
                 <LuMoveUpRight className="h-10 animate-text-small-to-big" />
               </button>
-              <button className="text-sm font-bold uppercase flex items-center gap-4">
-                <h1>Native application development</h1>
+              <button className="text-xs md:text-sm font-bold uppercase flex items-center gap-4">
+                <h1 className="text-start">Native application development</h1>
                 <LuMoveUpRight className="h-10 animate-text-small-to-big" />
               </button>
             </div>
@@ -56,8 +56,8 @@ const Home = ({ handelContactClick }) => {
                 CRaFTING INNOVaTIVE SOLUTIONS THROUGH SEaMLESS DESIGN aND
                 IMPaCTFUL CODE. LET'S CREaTE TOGETHER.
               </p>
-              <button className="text-sm font-bold uppercase flex items-center py-6 gap-4">
-                <h1>See my experience</h1>
+              <button className="text-xs md:text-sm font-bold uppercase flex items-center py-6 gap-4">
+                <h1 className="text-start">See my experience</h1>
                 <LuMoveUpRight className="h-10 animate-text-small-to-big" />
               </button>
               <Socialmedia />
@@ -68,9 +68,9 @@ const Home = ({ handelContactClick }) => {
               </h1>
               <button
                 onClick={() => handelContactClick("projects")}
-                className="text-sm font-bold uppercase flex items-center py-14 gap-4"
+                className="text-xs md:text-sm font-bold uppercase flex items-center py-14 gap-4"
               >
-                <h1>See my projects</h1>
+                <h1 className="text-start">See my projects</h1>
                 <LuMoveUpRight className="h-10 animate-text-small-to-big" />
               </button>
               <h2 className="font-bold text-sm uppercase">
@@ -137,7 +137,7 @@ const Home = ({ handelContactClick }) => {
                 </p>
                 <button
                   onClick={() => handelContactClick("contact")}
-                  className="px-5 md:px-10 py-3 font-extrabold uppercase border"
+                  className="px-5 md:px-10 py-2 md:py-3 text-sm md:text-base font-extrabold uppercase border"
                 >
                   send message
                 </button>
@@ -146,9 +146,9 @@ const Home = ({ handelContactClick }) => {
                 line
               </h1>
             </div>
-            <div className="flex flex-col py-5 border-t-2 md:flex-row justify-around items-center w-full">
+            <div className="flex flex-col py-2 my-2 border-t-2 md:flex-row justify-around items-center w-full">
               <h1 className="font-bold">Copyright@amit.kgec.2024</h1>
-              <div className="w-[30%]">
+              <div className="w-full py-3 md:py-0 md:w-[30%]">
                 <Socialmedia />
               </div>
               <h2 className="font-bold">amit.kgec.2024@gmail.com</h2>

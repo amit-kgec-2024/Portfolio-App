@@ -13,10 +13,10 @@ const Skill = () => {
   }, []);
   return (
     <div className="">
-      {loading ? <Loader/> : <div className="">
+      {loading ? <Loader/> : <div className="bg-dark1">
         <h1 className="w-full flex flex-col items-center text-5xl font-bold uppercase md:text-7xl animate-text-colorone-left-to-right">
           Skills
-          <span className="w-[40%] h-2 my-3 bg-red-400 rounded-full animate-background-color-left-to-right"></span>
+          <span className="w-[40%] h-2 my-3 rounded-full animate-background-color-left-to-right"></span>
         </h1>
         <div className="text-7xl flex flex-row justify-around p-4 animate-arrow-color-change">
           <div className="flex">
@@ -25,20 +25,20 @@ const Skill = () => {
             <FaChevronRight />
             <FaChevronRight />
           </div>
-          <div className="flex">
+          <div className="hidden sm:flex">
             <FaChevronRight />
             <FaChevronRight />
             <FaChevronRight />
             <FaChevronRight />
           </div>
-          <div className="flex">
+          <div className="hidden md:flex">
             <FaChevronRight />
             <FaChevronRight />
             <FaChevronRight />
             <FaChevronRight />
           </div>
         </div>
-        <div className="w-full h-screen bg-dark1 text-white flex flex-wrap items-center justify-center p-5 gap-10">
+        <div className="w-full bg-dark1 text-white flex flex-wrap items-center justify-center p-5 gap-10">
           {skillData.map((ele, index) => (
             <div
               key={index}
