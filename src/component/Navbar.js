@@ -26,7 +26,7 @@ const Navbar = ({ handelContactClick }) => {
             </div>
             <div className="text-start">
               <h2 className="text-lg font-light">+91 8513089660</h2>
-              <h3 className="text-lg font-light">amitmandalbetai@gmail.com</h3>
+              <h3 className="text-lg font-light">amit.kgec.2024@gmail.com</h3>
             </div>
             <h1 className="text-start text-xl font-light uppercase animate-text-colorone-left-to-right">
               Open for client projects
